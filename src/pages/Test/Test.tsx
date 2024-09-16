@@ -28,7 +28,7 @@ const Test: React.FC = () => {
         <div>
             <div id="chatContainer">
                 <SwarmCommentSystem
-                    stamp={"9d976f24b0956280dd62eaa050e97d2b7adae9a04f6e5921bbc56f5bb0bc1f69"} 
+                    stamp={"e1081a232ebd7854838ee406e530acdfe355d4ded08b7865bad27a52a0bcaa87"} 
                     topic={"bagoytopic-5"} 
                     privateKey={wallet.privateKey}
                     signer={signer}
