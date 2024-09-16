@@ -14,7 +14,7 @@ export default defineConfig(({mode}) => {
       react(),
       nodePolyfills(),
     ],
-    base: '/DevconAgora/',
+    base: '/DevconAgora-test/',
     resolve: {
       alias: {
         stream: 'stream-browserify',
