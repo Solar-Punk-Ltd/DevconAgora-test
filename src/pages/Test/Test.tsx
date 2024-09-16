@@ -32,7 +32,7 @@ const Test: React.FC = () => {
                     topic={"bagoytopic-3"} 
                     privateKey={wallet.privateKey}
                     signer={signer}
-                    beeApiUrl={"http://161.97.125.121:1733"}
+                    beeApiUrl={"https://nurnberg.zelmacorp.io"}
                 />
             </div>
             <NavigationFooter />
