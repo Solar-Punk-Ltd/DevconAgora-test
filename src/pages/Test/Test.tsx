@@ -29,7 +29,7 @@ const Test: React.FC = () => {
             <div id="chatContainer">
                 <SwarmCommentSystem
                     stamp={"9d976f24b0956280dd62eaa050e97d2b7adae9a04f6e5921bbc56f5bb0bc1f69"} 
-                    topic={"bagoytopic-3"} 
+                    topic={"bagoytopic-4"} 
                     privateKey={wallet.privateKey}
                     signer={signer}
                     beeApiUrl={"https://nurnberg.zelmacorp.io"}
