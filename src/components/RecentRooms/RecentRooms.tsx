@@ -2,8 +2,28 @@ import React from "react";
 import "./RecentRooms.scss";
 import { Link } from "react-router-dom";
 import RecentRoomsItem from "./RecentRoomsItem/RecentRoomsItem";
-
+import { ethers } from "ethers";
+import { Signer, Utils } from "@ethersphere/bee-js";
+import { SwarmCommentSystem } from "solarpunk-comment-system-ui";
 const RecentRooms: React.FC = () => {
+
+  // Create Wallet - this will be created outside the component
+  let wallet: ethers.Wallet | null;
+  const savedKey = localStorage.getItem("walletPrivKey");
+  if (savedKey) {
+    wallet = new ethers.Wallet(savedKey)
+  } else {
+    const tempPriv = ethers.Wallet.createRandom().privateKey;
+    wallet = new ethers.Wallet(tempPriv);
+    localStorage.setItem("walletPrivKey", wallet.privateKey)
+  }
+
+  const signer: Signer = {
+    address: Utils.hexToBytes(wallet.address.slice(2)),
+    sign: async (data: any) => {
+      return await wallet.signMessage(data);
+    },
+  };
   return (
     <div>
       <div className="recent-rooms">
